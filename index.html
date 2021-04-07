@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Profile card component</title>
+
+ <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+ <style>
+    
+    .attribution { font-size: 20px; text-align: center;
+                  color:turquoise;
+                  padding:20px 0;
+                   }
+    .attribution a { color:white;
+                      text-decoration: none; }
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.split {
+  width: 50%;
+  height: 50%;
+  float: left;
+}
+
+#top-left {
+    
+  background:url(images/bg-pattern-top.svg) bottom right ;
+}
+
+
+
+#bottom-right {
+    background: url(images/bg-pattern-bottom.svg)  ;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:rgb(13, 105, 105);
+ /* background: url(images/bg-pattern-bottom.svg)right bottom no-repeat, url(images/bg-pattern-top.svg) left top repeat;
+  background-color: teal;
+  width:10%;*/
+}
+
+
+.container {
+  width: 40%;
+  padding: 0 10px;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+    
+}
+
+
+
+/* Responsive container */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the  cards */
+.card {
+      
+      text-align: center;
+      margin: auto;
+      background-color: aliceblue;
+      border-radius: 20px;  
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+    }
+.info{
+        display: inline-block;
+      padding: 0px 10px;
+      
+    }
+.image
+   {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border-radius: 60%;
+    overflow:visible;
+    position: absolute;
+    top: calc(35% - 150px/2);
+    left: calc(50% - 50px);
+   }
+  @media(max-width:720px)
+  {
+    .image
+         {
+            overflow:visible;
+            position: absolute;
+            top: calc(15% - 150px/2);
+            left: calc(50% - 50px);
+         }
+
+  }
+  @media(max-width:600px)
+  {
+    .image
+         {
+            overflow:visible;
+            position: absolute;
+            top: calc(30% - 150px/2);
+            left: calc(50% - 50px);
+         }
+
+  }
+  
+   .card span
+   {
+     font-size: 20px;
+   }
+</style>
+</head>
+<body>
+    <div class="split" id="top-left"></div>
+    <div class="split" id="top-right"></div>
+    <div class="split" id="bottom-left"></div>
+    <div class="split" id="bottom-right"></div>
+   
+  <div class="container">
+    <div class="card">
+        <img src="images/bg-pattern-card.svg" alt="bg" style="width:100%;border-top-left-radius:20px;border-top-right-radius:20px;">
+        <img src="images/image-victor.jpg" class="image">
+        <br><br> <br>
+        
+        <h2>Victor Crest <span class="title">  26 </span></h2>
+        <p class="title">London</p>
+        <hr style="color:white">
+        <div class="info">
+        <h2> 80K</h2>
+        <p class="title">Followers</p>
+        </div>
+        <div class="info">
+          <h2> 803K</h2>
+          <p class="title">Likes</p>
+        </div>
+        <div class="info">
+          <h2> 1.4K</h2>
+          <p class="title"> Photos</p>
+         </div>
+    </div> 
+
+        
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+            <br>Coded by <a href="#">Menna Mohsen </a>.
+          </div>
+</div>
+
+</body>
+</html>
